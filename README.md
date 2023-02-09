@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Weather's Up app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to use
 
-## Available Scripts
+- 1: Run <strong> Open your terminal on VSCode and run yarn </strong>
 
-In the project directory, you can run:
+- 2: To finish, Run<strong> yarn start </strong> ( start server );
+---
 
-### `yarn start`
+## How to navigate the application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+(Once you started your project following the first twos steps)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+When it opens, <strong>if the borwser asks for your current location, accepted</strong>
+### Note: if your geolocation is blocked, it won't be able to navigate the map
 
-### `yarn test`
+After that follows:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 1: Clik on the map, it will start on Otawwa, CA, that will redirect you to your current location;
 
-### `yarn build`
+- 2: When the Marker(pin) is presented, you can click on <strong>SEARCH</strong> on the right top corner, to list cities near your current location;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 3: To move the marker(pin) just click on it and follows what the message says.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 4: When you place the a new location, just hit that <strong>SEARCH</strong> button again to change the cities;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 5: Finally, after you found the city that you want to get the weather, justo click on the <strong>VIEW</strong> button;
 
-### `yarn eject`
+## 🛠 Tecnologies used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [React](https://pt-br.reactjs.org/);
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [TypeScript](https://www.typescriptlang.org/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [React-Leaflet](https://react-leaflet.js.org/);
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Axios](https://axios-http.com/docs/intro);
 
-## Learn More
+- [OpenWeatherAPI](https://openweathermap.org/api);
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+For some questions, send me an email. =] (dimarques@gmail.com)

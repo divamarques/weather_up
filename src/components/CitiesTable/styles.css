@@ -1,0 +1,7 @@
+.card-holder {
+  box-shadow: -1rem 0 1rem rgba(0, 0, 0, .5);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4b384c;
+}
+
