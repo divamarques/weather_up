@@ -1,16 +1,20 @@
-import { useNavigation } from "react-router-dom";
 import { Container, Row, Col, Button, Nav,  } from 'reactstrap';
 import { usePosition } from "../../contexts/PositionContext";
 import { Map } from '../Map';
 import clouds from '../../assets/videos/Nuvens.mp4'
 import { useEffect, useState } from 'react';
-
+// import { useNavigation } from 'react-router-dom';
 
 
 export default function Home(){
   const {getListCities} = usePosition();
   const [showScroll, setShowScroll] = useState(false);
-  const navigate = useNavigation();
+  // const navigate = useNavigation();
+
+  function handleShowWeatherCards() {
+    getListCities();
+    // navigate('/dashboard')
+  }
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -28,8 +32,7 @@ export default function Home(){
 
 
   return (
-    <>
-    <section className="section position-relative">
+    <section className="section position-relative" id='home'>
         <video autoPlay loop muted style={{ position: 'absolute', zIndex: -1, width: '100%', minHeight: '100%', objectFit: 'cover' }}>
           <source src={clouds} type='video/mp4' />
         </video>
@@ -95,10 +98,10 @@ export default function Home(){
               <p className="text-muted mb-4 pb-2">In order for this to happen, please allow your browser to use your current location, after that, just click on the map (anywhere) and wait until the mark hits the right spot!
               Soon as the marker appears, just click below in 'FIND WEATHER NEAR ME' and it will show you a list of 5 closest neighborhoods around you. Hope you enjoy!
               </p>
-              <button type='button' onClick={getListCities} className="btn btn-primary" style={{marginRight: '2rem'}}>
+              <button type='button' onClick={handleShowWeatherCards} className="btn btn-primary" style={{marginRight: '2rem'}}>
                 Find weather near me
               </button>
-              <a href="https://github.com/divamarques/weather_app" className="btn btn-primary" target='_blank' rel="noreferrer">
+              <a href="https://github.com/divamarques/weather_up" className="btn btn-primary" target='_blank' rel="noreferrer">
                 Access Github for this repository <span className="ml-2 right-icon ">&#8594;</span>
               </a>
             </div>
@@ -111,13 +114,11 @@ export default function Home(){
         </Row>
       </Container>
       <div className={`scroll-to-top ${showScroll ? "show" : ""}`}>
-        <a href="/" onClick={scrollTop} style={{textDecoration: 'none'}}>
+        <a href="#home" onClick={scrollTop} style={{textDecoration: 'none'}}>
           <span className='text-warning'>Back to the top</span>
           <i className="fas fa-arrow-up text-warning" style={{transform: 'rotate(90deg)', marginLeft: '1rem'}}></i>
         </a>
       </div>
     </section>
-    
-    </>
   );
 }

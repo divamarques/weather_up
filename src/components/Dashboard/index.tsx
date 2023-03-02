@@ -1,9 +1,9 @@
 import { Col, Row, Container } from "reactstrap";
 import { CitiesTable } from "../CitiesTable";
-import "./styles.css";
 import { usePosition } from "../../contexts/PositionContext";
 import Modal from "react-modal";
 import manInLake from '../../assets/videos/human.mp4'
+import "./styles.css";
 
 Modal.setAppElement("#root");
 
@@ -18,8 +18,9 @@ Modal.setAppElement("#root");
             <source src={manInLake} type='video/mp4' />
           </video>
         <Container>
-          <Row className="justify-content-center">
-            <Col lg={12} md={8}>
+          <Row className="justify-content-center mt-2">
+            {isNewTableCities.length !== 0 && (
+            <Col lg={12} md={8} className="mt-5">
               <div className="title text-center mb-5">
                 <h3 className="font-weight-normal text-dark mt-5"><span className="text-primary">What's happening with the Weather, check it out!</span></h3>
                 <p className="text-muted">
@@ -27,7 +28,8 @@ Modal.setAppElement("#root");
                 </p>
               </div>
             </Col>
-            <Col className="col-xs-3 justify-content-center mr-auto">
+            )}
+            <Col className="col-xs-3 justify-content-center mr-auto mt-5">
               <CitiesTable listedCities={isNewTableCities} />
             </Col>
             {isNewTableCities.length === 0 && (

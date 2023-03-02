@@ -34,16 +34,10 @@ export default function Header(){
                 <Nav className="ms-auto" navbar>
                     <Nav className="m-auto" navbar>
                         <NavItem>
-                            <NavLink href="/">Home</NavLink>
+                            <NavLink href="#home">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="dashboard" className='header-location'>Dashboard</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="#videos">Videos</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="#contact">Contato</NavLink>
+                            <NavLink href="#dashboard" className='header-location'>Weather Board</NavLink>
                         </NavItem>
                     </Nav>
                 </Nav>
