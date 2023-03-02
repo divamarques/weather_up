@@ -44,10 +44,7 @@ export function Map() {
     )
   }
   return (
-    <MapContainer center={[45.4, -75.7]} zoom={13}scrollWheelZoom={false}>
-      {/* <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      /> */}
+    <MapContainer center={[45.4, -75.7]} zoom={13} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

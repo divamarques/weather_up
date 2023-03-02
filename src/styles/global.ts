@@ -114,5 +114,25 @@ export const GlobalStyle = createGlobalStyle`
     bottom: 5rem;
     right: 0;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+/* Fundo da barra de rolagem */
+  ::-webkit-scrollbar-track-piece {
+      background-color: transparent;
+      /* border-left: 1px solid #CCC */
+  }
+
+/* Cor do indicador de rolagem */
+  ::-webkit-scrollbar-thumb:vertical {
+      background-color: #BAC0C4
+  }
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+  ::-webkit-scrollbar-thumb:vertical:hover {
+      background-color: #717171
+  }
  
 `;

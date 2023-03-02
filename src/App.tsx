@@ -10,9 +10,9 @@ const WeatherUp = () =>  {
   return (
   
     <PositionProvider>
-      <Header />
-      <Home />
-      <Dashboard  />
+        <Header />
+        <Home />
+        <Dashboard />
       <GlobalStyle />
     </PositionProvider>
 
